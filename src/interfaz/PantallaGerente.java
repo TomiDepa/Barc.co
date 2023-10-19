@@ -16,13 +16,11 @@ public class PantallaGerente {
 
 	public static void main(String[] args) {
 		
-	
-		    
-		    // Resto de tu lógica para la pantalla del gerente...
-			
 
-		
-		Gerente gerente1 = new Gerente(1, 30445876, "Carlos", "Ramirez");
+
+		Gerente gerente1 = new Gerente(1, 30445876, "Carlos", "Ramirez", null, null);
+
+	
 			 
 		//Los contenedores disponibles 
 		Contenedor cont1 = new Contenedor(1,1000,"Azul");
@@ -69,7 +67,8 @@ public class PantallaGerente {
 								contSeleccionado = cont3;
 							break;
 							case 3:
-								
+								JOptionPane.showMessageDialog(null, "Salir");
+								 System.exit(0);
 							break;
 							
 						}
@@ -91,6 +90,7 @@ public class PantallaGerente {
 					break;
 				case 3: 
 					JOptionPane.showMessageDialog(null, "Salir");
+					 System.exit(0);
 					break;
 				default:
 				break;
