@@ -1,6 +1,7 @@
 package logica;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -17,15 +18,23 @@ public class Proveedor extends Persona{
 	private String ubicacion;
 	private ArrayList<Producto> productos;
 	
-	public Proveedor(int id, String nombre, String rubro, String ubicacion, String telefono, String email, String contrasena) {
+	public Proveedor(int id, String nombre, String rubro, 
+			String ubicacion, String telefono, String email, 
+			String contrasena) {
 		super(id,nombre,telefono,email,contrasena);
 		this.rubro = rubro;
 		this.ubicacion = ubicacion;
 		this.productos = new ArrayList<Producto>();
 	}
 	
+	
+
 	public Proveedor() {
+		super();
+		
 	}
+
+
 
 	public String getRubro() {
 		return rubro;
