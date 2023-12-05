@@ -61,7 +61,7 @@ public class PantallaProveedor {
 		          //nueva logica utilizando la base de datos
 		          
 		          // Obtener email del proveedor logueado
-		          String emailProveedor = Main.email;// obtener el email ingresado en el login
+		          String emailProveedor = InicioSesion.email;// obtener el email ingresado en el login
 		          
 		          // Obtener id del proveedor
 		          int idProveedor = 0;
@@ -113,7 +113,7 @@ public class PantallaProveedor {
 				break;
 			case 3:
 				// Ver Productos
-				emailProveedor = Main.email;// obtener el email ingresado en el login
+				emailProveedor = InicioSesion.email;// obtener el email ingresado en el login
 		          
 		        // Obtener id del proveedor
 		        idProveedor = 0;
@@ -153,6 +153,8 @@ public class PantallaProveedor {
 				break;
 			case 4:
 				JOptionPane.showMessageDialog(null, "Salir");
+				InicioSesion inicioSesion = new InicioSesion();
+				inicioSesion.run();
 				break;
 			default:
 				break;
