@@ -104,12 +104,9 @@ public class InicioSesion extends JFrame {
 			     if (validador.IniciarSesion(correo, contrasena, "gerente")) {
 			         Gerente verificador = new Gerente();
 			         verificador.Mostrar(correo, contrasena);
-			         PantallaGerente pantallaGerente = new PantallaGerente();
+			         MenuGerente menuGerente = new MenuGerente();
 			         InicioSesion.email = correo;
-			         pantallaGerente.Menu();
-			         //MenuGerente menugerente = new MenuGerente();
-			         
-			        // menugerente.run();
+			         menuGerente.run();
 			         dispose(); 
 			        } else if (validador.IniciarSesion(correo, contrasena, "cliente")) {
 			         Cliente verificador = new Cliente();
@@ -121,12 +118,18 @@ public class InicioSesion extends JFrame {
 			        } else if (validador.IniciarSesion(correo, contrasena, "proveedor")) {
 			          Proveedor verificador = new Proveedor();
 			          verificador.Mostrar(correo, contrasena);
-			          PantallaProveedor pantallaProveedor = new PantallaProveedor();
+
+			          
+				      MenuProveedor menuproveedor = new MenuProveedor();
+				      InicioSesion.email = correo;
+
+			          //PantallaProveedor pantallaProveedor = new PantallaProveedor();
 			          InicioSesion.email = correo;
-			          pantallaProveedor.Menu();
-				      //MenuProveedor menuproveedor = new MenuProveedor();
+			          //pantallaProveedor.Menu();
+				      MenuProveedor menuproveedor = new MenuProveedor();
 				      
-				      //menuproveedor.run();
+
+				      menuproveedor.run();
 				      dispose(); 
 			        } else {
 			        	JLabel mensajeError = new JLabel("Email o Contrasena incorrecto. No se pudo iniciar sesion");
